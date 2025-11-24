@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <h2>YouTube Transcript Extractor<span class="format-badge">JSON</span></h2>
+  
+  <div class="tabs">
+    <button class="tab active" data-tab="single">Single Video</button>
+    <button class="tab" data-tab="playlist">Playlist</button>
+    <button class="tab" data-tab="batch">Batch Process</button>
+  </div>
+
+  <div id="singleTab" class="tab-content active">
+    <div class="container">
+      <div class="info-text">
+        Click Extract to automatically load and download the transcript as JSON.
+      </div>
+      <button id="extractBtn">Extract Transcript</button>
+      <div id="status"></div>
+      <div id="metadata"></div>
+      <div id="preview"></div>
+    </div>
+  </div>
+
+  <div id="playlistTab" class="tab-content">
+    <div class="container">
+      <div class="info-text">
+        Extract video IDs from a YouTube playlist or channel videos page. The IDs will be saved to browser storage and can be downloaded or used for batch processing.
+        <br><small style="color: #999;">Supports: Playlists, Channel Videos (/@channel/videos), Shorts</small>
+      </div>
+      <input type="text" id="playlistUrl" placeholder="Paste YouTube playlist or channel URL here (e.g., https://www.youtube.com/@channel/videos)..." style="margin-bottom: 10px;">
+      <button id="extractPlaylistBtn">Extract Video IDs</button>
+      <div id="playlistStatus"></div>
+      <div id="playlistResults">
+        <div style="margin-bottom: 10px;"><strong>Extracted Video IDs:</strong> <span id="videoCount">0</span></div>
+        <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+          <button id="downloadIdsBtn" class="secondary">Download Video IDs</button>
+          <button id="useForBatchBtn" class="secondary">Use for Batch Process</button>
+        </div>
+        <textarea id="extractedIds" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div id="batchTab" class="tab-content">
+    <div class="container">
+      <div class="info-text">
+        Paste video IDs (one per line or comma-separated) to process multiple videos automatically.
+        <br><small style="color: #999;">⏱ Uses 5-15 second random delays between videos to avoid rate limiting.</small>
+      </div>
+      <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+        <button id="loadStoredIdsBtn" class="secondary">Load from Storage</button>
+        <button id="clearIdsBtn" class="secondary">Clear</button>
+      </div>
+      <textarea id="videoIds" placeholder="Enter video IDs, e.g.:&#10;wJP-G4c-KFg&#10;xoEuf4ESywE&#10;aQ3qc2V1QuE&#10;..."></textarea>
+      <div style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">
+        <label for="batchSize">Batch size:</label>
+        <input type="number" id="batchSize" min="1" value="10">
+        <span id="batchInfo"></span>
+      </div>
+      <div style="display: flex; gap: 10px; margin-top: 10px;">
+        <button id="startBatchBtn">Start Batch Process</button>
+        <button id="stopBatchBtn" class="secondary" style="display: none;">Stop</button>
+      </div>
+      <div id="batchStatus"></div>
+      <div id="batchProgress"></div>
+      <div id="batchLog"></div>
+    </div>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
