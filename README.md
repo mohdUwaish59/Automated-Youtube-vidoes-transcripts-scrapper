@@ -6,7 +6,7 @@ I built this extension to streamline the scrapping of transcripts from youtube v
 
 I was facing difficulties in extracting transcripts using "youtube-transctipt-api" in python due to rate limit and paid proxy servers.The other tools were either paid or did not support the bulk scrapping of transcripts so I came up with the idea of this extension.
 
-<mark>Only con is that, it does not work in background, it manipulates DOM in realtime and youtube has to be open all the time. </mark>
+- <mark>Only con is that, it does not work in background, it manipulates DOM in realtime and youtube has to be open all the time. </mark>
 
 
 ## Features
