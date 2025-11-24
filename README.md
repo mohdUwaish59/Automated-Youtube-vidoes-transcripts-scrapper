@@ -208,13 +208,127 @@ flowchart TD
     style N fill:#c8e6c9
 ```
 
-## Installation
+## Installation & Setup
 
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" (toggle in top right)
-4. Click "Load unpacked"
-5. Select the extension directory
+### Step 1: Download the Extension
+
+**Option A: Clone with Git**
+```bash
+git clone https://github.com/yourusername/youtube-transcript-extractor.git
+cd youtube-transcript-extractor
+```
+
+**Option B: Download ZIP**
+1. Click the green "Code" button on GitHub
+2. Select "Download ZIP"
+3. Extract the ZIP file to a folder on your computer
+4. Remember the folder location (e.g., `C:\Extensions\youtube-transcript-extractor`)
+
+### Step 2: Install in Chrome
+
+```mermaid
+flowchart LR
+    A[Open Chrome] --> B[Go to chrome://extensions/]
+    B --> C[Enable Developer ModeToggle top-right]
+    C --> D[Click Load unpacked]
+    D --> E[Select extension folder]
+    E --> F[✅ Extension Installed]
+    
+    style A fill:#e1f5ff
+    style F fill:#c8e6c9
+```
+
+**Detailed Steps:**
+
+1. **Open Chrome Extensions Page**
+   - Open Google Chrome browser
+   - Type `chrome://extensions/` in the address bar and press Enter
+   - Or: Click ⋮ (three dots) → More tools → Extensions
+
+2. **Enable Developer Mode**
+   - Look for "Developer mode" toggle in the top-right corner
+   - Click to turn it ON (it will turn blue)
+   - You'll see new buttons appear: "Load unpacked", "Pack extension", "Update"
+
+3. **Load the Extension**
+   - Click the "Load unpacked" button
+   - Navigate to the folder where you downloaded/cloned the extension
+   - Select the main folder (contains `manifest.json`)
+   - Click "Select Folder" or "Open"
+
+4. **Verify Installation**
+   - You should see the extension card appear
+   - Extension name: "YouTube Transcript Extractor"
+   - Status should show: Enabled ✓
+   - You'll see the extension icon in your Chrome toolbar
+
+### Step 3: First Time Setup
+
+1. **Pin the Extension** (Recommended)
+   - Click the puzzle piece icon 🧩 in Chrome toolbar
+   - Find "YouTube Transcript Extractor"
+   - Click the pin 📌 icon to keep it visible
+
+2. **Test the Extension**
+   - Go to any YouTube video
+   - Click the extension icon
+   - Side panel should open on the right side
+   - You should see three tabs: Single Video, Playlist, Batch Process
+
+### Installation Verification
+
+✅ **Check these items:**
+- [ ] Extension appears in `chrome://extensions/`
+- [ ] Extension is enabled (toggle is blue)
+- [ ] No errors shown on the extension card
+- [ ] Extension icon visible in toolbar (if pinned)
+- [ ] Side panel opens when clicking the icon on YouTube
+- [ ] All three tabs are visible in the side panel
+
+### Troubleshooting Installation
+
+**Problem: "Manifest file is missing or unreadable"**
+- Make sure you selected the correct folder
+- The folder must contain `manifest.json` file
+- Re-download or re-clone if files are corrupted
+
+**Problem: Extension doesn't appear in toolbar**
+- Click the puzzle piece 🧩 icon
+- Find the extension in the list
+- Click the pin icon to make it visible
+
+**Problem: "This extension may have been corrupted"**
+- Click "Repair" button on the extension card
+- If that doesn't work, remove and reinstall:
+  1. Click "Remove"
+  2. Refresh the extensions page
+  3. Load unpacked again
+
+**Problem: Side panel doesn't open**
+- Make sure you're on a YouTube page
+- Try refreshing the YouTube page
+- Check if extension is enabled in `chrome://extensions/`
+- Try clicking the extension icon again
+
+### Updating the Extension
+
+When you pull updates from the repository:
+
+1. Go to `chrome://extensions/`
+2. Find "YouTube Transcript Extractor"
+3. Click the refresh/reload icon 🔄 on the extension card
+4. Or click "Update" button at the top of the extensions page
+
+### Uninstalling
+
+If you want to remove the extension:
+
+1. Go to `chrome://extensions/`
+2. Find "YouTube Transcript Extractor"
+3. Click "Remove"
+4. Confirm removal
+5. Delete the extension folder from your computer (if desired)
+
 
 ## Usage
 
