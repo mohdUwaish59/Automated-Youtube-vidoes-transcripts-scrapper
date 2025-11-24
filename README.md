@@ -1,6 +1,10 @@
 # YouTube Transcript Extractor
 
-A powerful Chrome extension that extracts YouTube video transcripts and saves them as JSON files. Supports single videos, playlists, channel videos, and batch processing with automatic rate limiting.
+A powerful Chrome extension that automated extracts YouTube video transcripts (in BULK) and saves them as JSON files. Supports single videos, playlists, channel videos, and batch processing with automatic rate limiting.
+
+I built this extension to streamline the scrapping of transcripts from youtube videos for developing a rag based chatbot built on top of knowledge base from youtube videos.
+
+I was facing difficulties in extracting transcripts using "youtube-transctipt-api" in python due to rate limit and paid proxy servers.The other tools were either paid or did not support the bulk scrapping of transcripts so I came up with the idea of this extension.
 
 ## Features
 
